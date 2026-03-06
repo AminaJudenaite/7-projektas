@@ -1,34 +1,28 @@
-<header>
+<header id="header">
     <div class="logo">Mano Parduotuvė</div>
-    
-    <nav aria-label="Pagrindinė navigacija">
-        <button onclick="location.href='/'">Pagrindinis</button>
-        <button onclick="location.href='/products'">Prekės</button>
+    <nav class="nav">
+        <span role="button" tabindex="0" onclick="location.href='/'">Pagrindinis</span>
+        <span role="button" tabindex="0" onclick="location.href='/products'">Prekės</span>
     </nav>
 </header>
 
-<main>
+<main id="main">
     <section class="search-section">
-        <label for="search-input">Ieškoti:</label>
-        <input type="text" id="search-input">
+        <label for="search">Ieškoti:</label>
+        <input type="text" id="search">
         
-        <button type="button" onclick="search()">Ieškoti</button>
+        <div class="button" role="button" tabindex="0" onclick="search()">Ieškoti</div>
     </section>
 
     <div class="filter-dropdown">
-        <div class="label" id="sort-label">Rūšiuoti pagal:</div>
-        
-        <button class="dropdown-toggle" 
-                aria-haspopup="listbox" 
-                aria-expanded="false" 
-                aria-labelledby="sort-label">
+        <div class="label">Rūšiuoti pagal:</div>
+        <div class="dropdown-toggle" role="button" tabindex="0" aria-haspopup="listbox" aria-expanded="false">
             Pasirinkite...
-        </button>
-
-        <ul class="options" role="listbox" style="display:none">
-            <li role="option">Pigiausios viršuje</li>
-            <li role="option">Brangiausios viršuje</li>
-        </ul>
+        </div>
+        <div class="options" style="display:none" role="listbox">
+            <div role="option">Pigiausios viršuje</div>
+            <div role="option">Brangiausios viršuje</div>
+        </div>
     </div>
 
     <div class="alert-box" aria-live="polite">
