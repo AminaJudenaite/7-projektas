@@ -1,1 +1,37 @@
+<header>
+    <div class="logo">Mano Parduotuvė</div>
+    
+    <nav aria-label="Pagrindinė navigacija">
+        <button onclick="location.href='/'">Pagrindinis</button>
+        <button onclick="location.href='/products'">Prekės</button>
+    </nav>
+</header>
 
+<main>
+    <section class="search-section">
+        <label for="search-input">Ieškoti:</label>
+        <input type="text" id="search-input">
+        
+        <button type="button" onclick="search()">Ieškoti</button>
+    </section>
+
+    <div class="filter-dropdown">
+        <div class="label" id="sort-label">Rūšiuoti pagal:</div>
+        
+        <button class="dropdown-toggle" 
+                aria-haspopup="listbox" 
+                aria-expanded="false" 
+                aria-labelledby="sort-label">
+            Pasirinkite...
+        </button>
+
+        <ul class="options" role="listbox" style="display:none">
+            <li role="option">Pigiausios viršuje</li>
+            <li role="option">Brangiausios viršuje</li>
+        </ul>
+    </div>
+
+    <div class="alert-box" aria-live="polite">
+        Prekė sėkmingai pridėta į krepšelį!
+    </div>
+</main>
